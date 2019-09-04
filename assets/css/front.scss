@@ -4,6 +4,7 @@ $secondary: #4e5a61 !default;
 $info: #019fff !default;
 $light: #f0f5f8 !default;
 $dark: #181b32 !default;
+$gray-900: #212529 !default;
 //FONTS
 $font-family-base: 'Nunito Sans', sans-serif !default;
 $font-weight-light: 200 !default;
@@ -207,6 +208,9 @@ header {
       right: 0;
       z-index: 1;
     }
+    img.bg-shape {
+      width: 63%;
+    }
     img.data-img-1 {
       top: 220px;
       left: 60px;
@@ -226,7 +230,6 @@ header {
   }
 }
 
-
 //FOOTER
 footer {
   font-size: .9rem;
@@ -245,4 +248,59 @@ footer {
 }
 
 @media (max-width: map-get($grid-breakpoints, "md")) {
+}
+
+
+
+
+// Data Area
+.data-area {
+  padding-top: 100px;
+  .data-text {
+    margin-bottom: 30px;
+    p {
+      font-size: 16px;
+      line-height: 27px;
+      color: rgb(78, 90, 97);
+      a{
+        color: $info;
+        font-weight: 500;
+      }
+    }
+  }
+  .data-content {
+    .data-banner {
+      // background-image: url(../img/shape-img-1.png);
+      // background-size: 100%;
+      // background-position: right;
+      // background-repeat: no-repeat;
+      // height: 290px;
+      // width: 45%;
+      h3 {
+        color: #ffff;
+        background-image: url(../img/shape-img-1.png);
+        background-size: 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+        padding: 100px 100px;
+      }
+    }
+  }
+}
+
+
+// about Area
+.about-area {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  .about-content{
+    img{
+      margin-bottom: 50px;
+    }
+    p{
+      font-size: 16px;
+      line-height: 27px;
+      color: rgb(78, 90, 97);
+    }
+  }
 }
