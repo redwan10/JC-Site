@@ -161,6 +161,9 @@ header {
       opacity: 0.5;
       padding: 7px 15px 0px;
       transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
   .header-banner {
@@ -260,7 +263,7 @@ footer {
     margin-bottom: 30px;
     p {
       font-size: 16px;
-      line-height: 27px;
+      line-height: 28px;
       color: rgb(78, 90, 97);
       a{
         color: $info;
@@ -268,21 +271,41 @@ footer {
       }
     }
   }
-  .data-content {
-    .data-banner {
-      // background-image: url(../img/shape-img-1.png);
-      // background-size: 100%;
-      // background-position: right;
-      // background-repeat: no-repeat;
-      // height: 290px;
-      // width: 45%;
-      h3 {
-        color: #ffff;
-        background-image: url(../img/shape-img-1.png);
-        background-size: 100%;
-        background-position: right;
-        background-repeat: no-repeat;
-        padding: 100px 100px;
+  .data-banner {
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      left: -120px;
+      z-index: 1;
+    }
+    h3 {
+      color: #ffff;
+      position: relative;
+      padding: 100px 100px;
+      z-index: 2;
+      padding-right: 80px;
+      padding-left: 140px;
+      font-size: 36px;
+      line-height: 54px;
+    }
+  }
+  .data-link {
+    a {
+      display: block;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      line-height: 33px;
+      color: #4e5a61;
+      opacity: 0.5;
+      padding: 7px 15px 0px;
+      -webkit-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        opacity: 1;
       }
     }
   }
