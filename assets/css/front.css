@@ -10627,14 +10627,6 @@ nav .nav-item.active .nav-link {
   color: #181b32 !important;
 }
 
-header {
-  position: relative;
-}
-
-header h1 {
-  font-weight: 200;
-}
-
 header.home {
   height: 100vh;
   min-height: 900px;
@@ -10743,8 +10735,8 @@ header .header-banner:after {
 
 header .header-banner span.after-effect {
   position: absolute;
-  bottom: 195px;
-  right: 200px;
+  top: 520px;
+  left: 400px;
   width: 220px;
   height: 80px;
   background-color: #0a2056;
@@ -10761,10 +10753,6 @@ header .header-banner img {
   left: 0;
   right: 0;
   z-index: 1;
-}
-
-header .header-banner img.bg-shape {
-  width: 63%;
 }
 
 header .header-banner img.data-img-1 {
@@ -10965,4 +10953,50 @@ footer {
   padding-top: 30px;
   margin-bottom: 0;
 }
+
+/* ***Responsive media query*** */
+/* Extra large devices (large desktops, 1200px and up) */
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  header.home {
+    height: 0;
+  }
+  header .bg-shape-2 {
+    display: none;
+  }
+  header .header-content h2 {
+    font-size: 32px;
+    line-height: 52px;
+  }
+  header .header-content h4 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  header .header-banner:after {
+    left: 330px;
+  }
+  header .header-banner span.after-effect {
+    left: 240px;
+  }
+  header .header-banner img.bg-shape {
+    width: 100%;
+  }
+  header .header-banner img.data-img-2 {
+    top: 420px;
+    left: 70px;
+    width: 75%;
+  }
+  header .header-banner img.data-img-3 {
+    top: 25px;
+    right: 20px;
+  }
+  .sensor-area .sensor-content {
+    padding-top: 140px;
+    padding-right: 15px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+/* Extra small devices (portrait phones, less than 768px) */
+/* Small devices (landscape phones, 576px and up) */
 /*# sourceMappingURL=front.css.map */

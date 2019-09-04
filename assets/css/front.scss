@@ -98,10 +98,6 @@ nav {
 
 //HEADER
 header {
-  position: relative;
-  h1 {
-    font-weight: $font-weight-light;
-  }
   &.home {
     height: 100vh;
     min-height: 900px;
@@ -196,8 +192,8 @@ header {
     }
     span.after-effect {
       position: absolute;
-      bottom: 195px;
-      right: 200px;
+      top: 520px;
+      left: 400px;
       width: 220px;
       height: 80px;
       background-color: rgb(10, 32, 86);
@@ -212,9 +208,6 @@ header {
       left: 0;
       right: 0;
       z-index: 1;
-    }
-    img.bg-shape {
-      width: 63%;
     }
     img.data-img-1 {
       top: 220px;
@@ -333,7 +326,6 @@ footer {
 
 
 // Sensor Area
-
 .sensor-area {
   margin-top: 100px;
   padding-bottom: 100px;
@@ -414,4 +406,97 @@ footer {
       margin-bottom: 0;
     }
   }
+}
+
+
+
+
+/* ***Responsive media query*** */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width:1500px){ 
+  
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  //HEADER
+header {
+  &.home {
+    height: 0;
+  }
+  .bg-shape-2 {
+    display: none;
+  }
+  .header-content {
+    h2 {
+      font-size: 32px;
+      line-height: 52px;
+    }
+    h4 {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+  .header-banner {
+    &:after {
+      left: 330px;
+    }
+    span.after-effect {
+      left: 240px;
+    }
+    img.bg-shape {
+      width: 100%;
+    }
+    img.data-img-2 {
+      top: 420px;
+      left: 70px;
+      width: 75%;
+    }
+    img.data-img-3 {
+      top: 25px;
+      right: 20px;
+    }
+  }
+}
+// Sensor Area
+.sensor-area {
+  .sensor-content {
+    padding-top: 140px;
+    padding-right: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+   
+  
+
+
+
+
+
+
+
+
+
+}
+
+/* Extra small devices (portrait phones, less than 768px) */
+@media (max-width: 767.98px) { 
+   
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+   
 }
