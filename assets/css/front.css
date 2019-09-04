@@ -10901,6 +10901,10 @@ footer {
   line-height: 32px;
 }
 
+.service-area {
+  padding-top: 100px;
+}
+
 .service-area .box-gray {
   padding-left: 50px;
   padding-right: 50px;
