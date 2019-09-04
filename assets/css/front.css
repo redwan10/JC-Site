@@ -10831,7 +10831,7 @@ footer {
 }
 
 .data-area .data-banner h3 {
-  color: #ffff;
+  color: #fff;
   position: relative;
   padding: 100px 100px;
   z-index: 2;
@@ -10871,5 +10871,92 @@ footer {
   font-size: 16px;
   line-height: 27px;
   color: #4e5a61;
+}
+
+.sensor-area {
+  margin-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.sensor-area img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.sensor-area .sensor-content {
+  padding-top: 140px;
+  padding-right: 50px;
+}
+
+.sensor-area .sensor-content h4 {
+  color: #0394f7;
+}
+
+.sensor-area .sensor-content p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.service-area .box-gray {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  min-height: 530px;
+  position: relative;
+  margin-bottom: -180px;
+  z-index: 2;
+}
+
+.service-area .box-gray h3 {
+  color: #212529;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.service-area .box-gray a {
+  display: block;
+  font-size: 36px;
+  color: #019fff;
+  font-weight: 900;
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+}
+
+.service-area .service-banner {
+  position: relative;
+  z-index: 1;
+}
+
+.service-area .blue-box {
+  background-color: #007bff;
+  color: #fff;
+  padding: 50px;
+  position: relative;
+  margin-top: -320px;
+  z-index: 2;
+}
+
+.service-area .blue-box h3 {
+  color: inherit;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 40px;
+}
+
+.service-area .blue-box p {
+  font-weight: 100;
+  font-size: 22px;
+  color: #f0f5f8;
+  line-height: 32px;
+  padding-top: 30px;
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=front.css.map */

@@ -1,10 +1,13 @@
 //COLORS
+$white:    #fff !default;
 $primary: #4b22f4 !default;
 $secondary: #4e5a61 !default;
 $info: #019fff !default;
 $light: #f0f5f8 !default;
 $dark: #181b32 !default;
+$gray-200: #e9ecef !default;
 $gray-900: #212529 !default;
+$blue:    #007bff !default;
 //FONTS
 $font-family-base: 'Nunito Sans', sans-serif !default;
 $font-weight-light: 200 !default;
@@ -109,8 +112,6 @@ header {
       height: 100%;
     }
   }
-  &.inner {
-  }
   .bg-shape-1 {
     position: absolute;
     top: 0px;
@@ -145,7 +146,7 @@ header {
       line-height: 36px;
       max-width: 450px;
       margin-bottom: 40px;
-      color: rgb(78, 90, 97);
+      color: $secondary;
       font-weight: 400;
     }
     .btn.btn-info{
@@ -157,7 +158,7 @@ header {
       letter-spacing: 1.5px;
       font-weight: 600;
       line-height: 33px;
-      color: rgb(78, 90, 97);
+      color: $secondary;
       opacity: 0.5;
       padding: 7px 15px 0px;
       transition: all 0.3s ease 0s;
@@ -264,7 +265,7 @@ footer {
     p {
       font-size: 16px;
       line-height: 28px;
-      color: rgb(78, 90, 97);
+      color: $secondary;
       a{
         color: $info;
         font-weight: 500;
@@ -282,7 +283,7 @@ footer {
       z-index: 1;
     }
     h3 {
-      color: #ffff;
+      color: $white;
       position: relative;
       padding: 100px 100px;
       z-index: 2;
@@ -323,7 +324,91 @@ footer {
     p{
       font-size: 16px;
       line-height: 27px;
-      color: rgb(78, 90, 97);
+      color: $secondary;
+    }
+  }
+}
+
+
+// Sensor Area
+
+.sensor-area {
+  margin-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .sensor-content {
+    padding-top: 140px;
+    padding-right: 50px;
+    h4 {
+      color: #0394f7;
+    }
+    p {
+      color: $white;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+}
+
+
+// Service Area
+.service-area {
+  .box-gray {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: 530px;
+    position: relative;
+    margin-bottom: -180px;
+    z-index: 2;
+    h3 {
+      color: $gray-900;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 42px;
+    }
+    a {
+      display: block;
+      font-size: 36px;
+      color: $info;
+      font-weight: 900;
+      position: absolute;
+      bottom: 40px;
+      left: 50px;
+    }
+  }
+  .service-banner {
+    position: relative;
+    z-index: 1;
+  }
+  .blue-box {
+    background-color: $blue;
+    color: $white;
+    padding: 50px;
+    position: relative;
+    margin-top: -320px;
+    z-index: 2;
+    h3 {
+      color: inherit;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 40px;
+    }
+    p {
+      font-weight: 100;
+      font-size: 22px;
+      color: $light;
+      line-height: 32px;
+      padding-top: 30px;
+      margin-bottom: 0;
     }
   }
 }
