@@ -343,7 +343,6 @@ footer {
     img {
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
       left: -120px;
       z-index: 1;
@@ -353,6 +352,11 @@ footer {
       @media (max-width: 767.98px) { 
         display: none;
       }
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) and (max-width: 767.98px) { 
+        display: inline-block;
+        left: -45px;
+      }
     }
     img.shape-1-1{
       display: none;
@@ -361,6 +365,14 @@ footer {
         display: inline-block;
         width: 100%;
         left: 0;
+      }
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) and (max-width: 767.98px) { 
+        display: none;
+      }
+      @media (min-width: 415px) and (max-width: 575px) {
+        width: 350px;
+        left: 60px;
       }
     }
     h3 {
@@ -389,9 +401,24 @@ footer {
         font-size: 28px;
         line-height: 45px;
       }
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) and (max-width: 767.98px) { 
+        padding: 100px 0px;
+        z-index: 2;
+        padding-right: 10px;
+        padding-left: 170px;
+      }
     }
   }
   .data-link {
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) and (max-width: 767.98px) { 
+      margin-top: 200px;
+      margin-bottom: 45px;
+    }
+    @media (min-width: 390px) and (max-width: 575px) { 
+      margin-top: 100px;
+    }
     a {
       display: block;
       text-transform: uppercase;
@@ -443,6 +470,13 @@ footer {
     @media (max-width: 767.98px) { 
       width: 100%;
     }
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) and (max-width: 767.98px) { 
+      width: 300px;
+    }
+    @media (min-width: 380px) and (max-width: 575px) { 
+      width: 290px;
+    }
   }
   .sensor-content {
     padding-top: 140px;
@@ -458,6 +492,13 @@ footer {
       color: $white;
       font-size: 16px;
       line-height: 32px;
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        max-width: 300px;
+       }
+       @media (min-width: 390px) and (max-width: 575px) { 
+        max-width: 200px;
+       }
     }
   }
 }

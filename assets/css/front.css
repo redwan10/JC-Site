@@ -10932,7 +10932,6 @@ footer {
 .data-area .data-banner img {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   left: -120px;
   z-index: 1;
@@ -10940,6 +10939,7 @@ footer {
 
 .data-area .data-banner img.shape-1 {
   /* Extra small devices (portrait phones, less than 768px) */
+  /* Small devices (landscape phones, 576px and up) */
 }
 
 @media (max-width: 767.98px) {
@@ -10948,9 +10948,17 @@ footer {
   }
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .data-area .data-banner img.shape-1 {
+    display: inline-block;
+    left: -45px;
+  }
+}
+
 .data-area .data-banner img.shape-1-1 {
   display: none;
   /* Extra small devices (portrait phones, less than 768px) */
+  /* Small devices (landscape phones, 576px and up) */
 }
 
 @media (max-width: 767.98px) {
@@ -10958,6 +10966,19 @@ footer {
     display: inline-block;
     width: 100%;
     left: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .data-area .data-banner img.shape-1-1 {
+    display: none;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 575px) {
+  .data-area .data-banner img.shape-1-1 {
+    width: 350px;
+    left: 60px;
   }
 }
 
@@ -10972,6 +10993,7 @@ footer {
   line-height: 54px;
   /* Medium devices (tablets, 768px and up) */
   /* Extra small devices (portrait phones, less than 768px) */
+  /* Small devices (landscape phones, 576px and up) */
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -10992,6 +11014,32 @@ footer {
     padding-left: 70px;
     font-size: 28px;
     line-height: 45px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .data-area .data-banner h3 {
+    padding: 100px 0px;
+    z-index: 2;
+    padding-right: 10px;
+    padding-left: 170px;
+  }
+}
+
+.data-area .data-link {
+  /* Small devices (landscape phones, 576px and up) */
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .data-area .data-link {
+    margin-top: 200px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 575px) {
+  .data-area .data-link {
+    margin-top: 100px;
   }
 }
 
@@ -11040,11 +11088,24 @@ footer {
   top: 0;
   bottom: 0;
   /* Extra small devices (portrait phones, less than 768px) */
+  /* Small devices (landscape phones, 576px and up) */
 }
 
 @media (max-width: 767.98px) {
   .sensor-area img {
     width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .sensor-area img {
+    width: 300px;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 575px) {
+  .sensor-area img {
+    width: 290px;
   }
 }
 
@@ -11068,6 +11129,19 @@ footer {
   color: #fff;
   font-size: 16px;
   line-height: 32px;
+  /* Small devices (landscape phones, 576px and up) */
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .sensor-area .sensor-content p {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 575px) {
+  .sensor-area .sensor-content p {
+    max-width: 200px;
+  }
 }
 
 .service-area {
