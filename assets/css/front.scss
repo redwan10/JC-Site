@@ -29,6 +29,16 @@ $btn-font-size-lg: 1.1rem!default;
 //INPUTS
 $input-bg: $light !default;
 
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+
 //IMPORTS
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,400,700&display=swap');
 @import '../node_modules/bootstrap/scss/bootstrap';
@@ -100,15 +110,14 @@ nav {
 header {
   &.home {
     min-height: 900px;
-    max-height: 1100px;
     padding-top: 90px;
     background-image: linear-gradient(190deg, #f3f8fa 1%, #eaf0f4 95%);
     /* Large devices (desktops, 992px and up) */
-    @media (min-width: 768px) and (max-width: 1199.98px) { 
+    @media (min-width: map-get($grid-breakpoints, "md")) and (max-width:map-get($grid-breakpoints, "xl")) {
       min-height: 830px;
     }
     /* Extra small devices (portrait phones, less than 768px) */
-    @media (max-width: 767.98px) { 
+    @media (max-width: 767.98px) {
       min-height: 750px;
     }
     .row {
@@ -127,12 +136,12 @@ header {
     border-radius: 6px;
     z-index: 2;
     /* Large devices (desktops, 992px and up) */
-    @media (min-width: 992px) and (max-width: 1199.98px) { 
+    @media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "xl")) {
       top: 70%;
       left: 80%;
     }
     /* Medium devices (tablets, 768px and up) */
-    @media (max-width: 991.98px) { 
+    @media (max-width:map-get($grid-breakpoints, "lg")) {
       display: none;
     }
   }
@@ -146,7 +155,7 @@ header {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
      /* Extra small devices (portrait phones, less than 768px) */
-     @media (max-width: 767.98px) {
+     @media (max-width: map-get($grid-breakpoints, "md")) {
        display: none;
      }
 }
@@ -161,7 +170,7 @@ header {
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     /* Large devices (desktops, 992px and up) */
-    @media (max-width: 1199.98px) { 
+    @media (max-width: map-get($grid-breakpoints, "xl")) {
       display: none;
     }
 }
@@ -173,7 +182,7 @@ header {
       max-width: 450px;
       margin: 115px 0px 30px;
       /* Extra small devices (portrait phones, less than 768px) */
-      @media (max-width: 767.98px) { 
+      @media (max-width: map-get($grid-breakpoints, "md")) {
         font-size: 28px;
         line-height: 42px;
       }
@@ -186,7 +195,7 @@ header {
       color: $secondary;
       font-weight: 400;
       /* Extra small devices (portrait phones, less than 768px) */
-      @media (max-width: 767.98px) { 
+      @media (max-width: map-get($grid-breakpoints, "md")) {
         font-size: 19px;
         line-height: 36px;
       }
@@ -205,6 +214,10 @@ header {
       opacity: 0.5;
       padding: 7px 15px 0px;
       transition: all 0.3s ease 0s;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -ms-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
       &:hover {
         opacity: 1;
       }
@@ -213,7 +226,7 @@ header {
   .header-banner {
     position: relative;
     /* Medium devices (tablets, 768px and up) */
-    @media (max-width: 991.98px) { 
+    @media (max-width: map-get($grid-breakpoints, "lg")) {
       display: none;
     }
     &:before {
@@ -227,6 +240,10 @@ header {
       box-shadow: rgba(10, 32, 87, 0.1) 0px 10px 28px 0px;
       border-radius: 6px;
       z-index: 2;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
     }
     span.after-effect {
       position: absolute;
@@ -238,12 +255,16 @@ header {
       box-shadow: rgba(10, 32, 87, 0.24) 0px 14px 28px 0px;
       border-radius: 6px;
       z-index: 2;
-      /* Extra large devices (large desktops, 1200px and up) */
-      @media (min-width: 1200px) and (max-width:1500px){ 
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+      /*Extralargedevices(largedesktops,1200pxandup)*/
+      @media(min-width:map-get($grid-breakpoints, "xl")) and (max-width:1500px){
         left: 330px;
       }
       /* Large devices (desktops, 992px and up) */
-      @media (min-width: 992px) and (max-width: 1199.98px) { 
+      @media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "xl")) {
         left: 240px;
       }
     }
@@ -258,7 +279,7 @@ header {
     img.bg-shape{
       width: 500px;
       /* Large devices (desktops, 992px and up) */
-      @media (min-width: 992px) and (max-width: 1199.98px) { 
+      @media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "xl")) {
         width: 450px;
       }
     }
@@ -272,12 +293,12 @@ header {
       left: 220px;
       z-index: 3;
         /* Extra large devices (large desktops, 1200px and up) */
-        @media (min-width: 1200px) and (max-width:1500px){ 
+        @media (min-width: map-get($grid-breakpoints, "xl")) and (max-width:1500px){
           top: 417px;
           left: 150px;
         }
         /* Large devices (desktops, 992px and up) */
-        @media (min-width: 992px) and (max-width: 1199.98px) { 
+        @media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "xl")) {
           left: 75px;
         }
     }
@@ -287,12 +308,12 @@ header {
       right: 95px;
       z-index: 3;
       /* Extra large devices (large desktops, 1200px and up) */
-      @media (min-width: 1200px) and (max-width:1500px){ 
+      @media (min-width: map-get($grid-breakpoints, "xl")) and (max-width:1500px){
         top: 30px;
         right: 20px;
       }
       /* Large devices (desktops, 992px and up) */
-      @media (min-width: 992px) and (max-width: 1199.98px) { 
+      @media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "xl")) {
         top: 30px;
         right: 30px;
       }
@@ -311,16 +332,6 @@ footer {
     box-shadow: #2248f445 0px 16px 25px 0px;
   }
 }
-
-//BOXES
-.box-gray {
-  background-image: linear-gradient(190deg, #f3f8fa 1%, #eaf0f4 95%);
-}
-
-@media (max-width: map-get($grid-breakpoints, "md")) {
-}
-
-
 
 
 // Data Area
@@ -349,11 +360,11 @@ footer {
     }
     img.shape-1{
       /* Extra small devices (portrait phones, less than 768px) */
-      @media (max-width: 767.98px) { 
+      @media (max-width: map-get($grid-breakpoints, "md")) {
         display: none;
       }
       /* Small devices (landscape phones, 576px and up) */
-      @media (min-width: 576px) and (max-width: 767.98px) { 
+      @media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
         display: inline-block;
         left: -45px;
       }
@@ -361,13 +372,13 @@ footer {
     img.shape-1-1{
       display: none;
       /* Extra small devices (portrait phones, less than 768px) */
-      @media (max-width: 767.98px) { 
+      @media (max-width: map-get($grid-breakpoints, "md")) {
         display: inline-block;
         width: 100%;
         left: 0;
       }
       /* Small devices (landscape phones, 576px and up) */
-      @media (min-width: 576px) and (max-width: 767.98px) { 
+      @media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
         display: none;
       }
       @media (min-width: 415px) and (max-width: 575px) {
@@ -385,13 +396,13 @@ footer {
       font-size: 36px;
       line-height: 54px;
       /* Medium devices (tablets, 768px and up) */
-      @media (min-width: 768px) and (max-width: 991.98px) { 
+      @media (min-width: map-get($grid-breakpoints, "md")) and (max-width: map-get($grid-breakpoints, "lg")) {
         padding: 75px 100px;
         padding-right: 27px;
         padding-left: 130px;
       }
       /* Extra small devices (portrait phones, less than 768px) */
-      @media (max-width: 767.98px) { 
+      @media (max-width: map-get($grid-breakpoints, "md")) {
         padding: 70px 0px;
         padding-right: 0px;
         padding-left: 0px;
@@ -402,7 +413,7 @@ footer {
         line-height: 45px;
       }
       /* Small devices (landscape phones, 576px and up) */
-      @media (min-width: 576px) and (max-width: 767.98px) { 
+      @media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
         padding: 100px 0px;
         z-index: 2;
         padding-right: 10px;
@@ -412,11 +423,11 @@ footer {
   }
   .data-link {
     /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 576px) and (max-width: 767.98px) { 
+    @media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
       margin-top: 200px;
       margin-bottom: 45px;
     }
-    @media (min-width: 390px) and (max-width: 575px) { 
+    @media (min-width: 390px) and (max-width: 575px) {
       margin-top: 100px;
     }
     a {
@@ -430,6 +441,9 @@ footer {
       opacity: 0.5;
       padding: 7px 15px 0px;
       -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -ms-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
       transition: all 0.3s ease 0s;
       &:hover {
         opacity: 1;
@@ -467,14 +481,14 @@ footer {
     top: 0;
     bottom: 0;
     /* Extra small devices (portrait phones, less than 768px) */
-    @media (max-width: 767.98px) { 
+    @media (max-width: map-get($grid-breakpoints, "md")) {
       width: 100%;
     }
     /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 576px) and (max-width: 767.98px) { 
+    @media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
       width: 300px;
     }
-    @media (min-width: 380px) and (max-width: 575px) { 
+    @media (min-width: 380px) and (max-width: 575px) {
       width: 290px;
     }
   }
@@ -482,7 +496,7 @@ footer {
     padding-top: 140px;
     padding-right: 50px;
      /* Extra large devices (large desktops, 1200px and up) */
-     @media (min-width: 1200px) and (max-width:1500px){ 
+     @media (min-width: map-get($grid-breakpoints, "xl")) and (max-width:1500px){
       padding-right: 10px;
      }
     h4 {
@@ -493,10 +507,10 @@ footer {
       font-size: 16px;
       line-height: 32px;
       /* Small devices (landscape phones, 576px and up) */
-      @media (min-width: 576px) and (max-width: 767.98px) {
+      @media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
         max-width: 300px;
        }
-       @media (min-width: 390px) and (max-width: 575px) { 
+       @media (min-width: 390px) and (max-width: 575px) {
         max-width: 200px;
        }
     }
@@ -508,6 +522,7 @@ footer {
 .service-area {
   padding-top: 100px;
   .box-gray {
+    background-image: linear-gradient(190deg, #f3f8fa 1%, #eaf0f4 95%);
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 40px;
@@ -517,11 +532,11 @@ footer {
     margin-bottom: -180px;
     z-index: 2;
     /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 768px) and (max-width: 991.98px) { 
+    @media (min-width: map-get($grid-breakpoints, "md")) and (max-width: map-get($grid-breakpoints, "lg")) {
       margin-bottom: -110px;
     }
     /* Extra small devices (portrait phones, less than 768px) */
-    @media (max-width: 767.98px) { 
+    @media (max-width: map-get($grid-breakpoints, "md")) {
       padding-left: 20px;
       padding-right: 20px;
       padding-top: 25px;
@@ -537,7 +552,7 @@ footer {
       font-size: 36px;
       line-height: 42px;
        /* Extra small devices (portrait phones, less than 768px) */
-      @media (max-width: 767.98px) { 
+      @media (max-width: map-get($grid-breakpoints, "md")) {
         font-size: 30px;
       }
     }
@@ -550,7 +565,7 @@ footer {
       bottom: 40px;
       left: 50px;
        /* Extra small devices (portrait phones, less than 768px) */
-       @media (max-width: 767.98px) { 
+       @media (max-width: map-get($grid-breakpoints, "md")) {
         bottom: 20px;
         left: 20px;
        }
@@ -558,7 +573,7 @@ footer {
   }
   .shape-banner {
     /* Medium devices (tablets, 768px and up) */
-    @media (max-width: 991.98px) { 
+    @media (max-width: map-get($grid-breakpoints, "lg")) {
       display: none;
     }
   }
@@ -574,15 +589,15 @@ footer {
     margin-top: -320px;
     z-index: 2;
     /* Extra large devices (large desktops, 1200px and up) */
-    @media (min-width: 1200px) and (max-width:1500px){ 
+    @media (min-width: map-get($grid-breakpoints, "xl")) and (max-width:1500px){
       margin-top: -230px;
     }
     /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 768px) and (max-width: 991.98px) {
+    @media (min-width: map-get($grid-breakpoints, "md")) and (max-width: map-get($grid-breakpoints, "lg")) {
       margin-top: -210px;
     }
     /* Extra small devices (portrait phones, less than 768px) */
-    @media (max-width: 767.98px) {
+    @media (max-width: map-get($grid-breakpoints, "md")) {
       padding: 20px;
       margin-top: 40px;
       margin-left: 15px;
@@ -595,7 +610,7 @@ footer {
       line-height: 42px;
       margin-bottom: 40px;
       /* Extra small devices (portrait phones, less than 768px) */
-      @media (max-width: 767.98px) { 
+      @media (max-width: map-get($grid-breakpoints, "md")) {
         font-size: 30px;
       }
     }
