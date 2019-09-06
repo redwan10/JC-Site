@@ -10702,7 +10702,7 @@ header .bg-shape-1 {
 header .bg-shape-2 {
   position: absolute;
   z-index: 1;
-  bottom: 290px;
+  top: 700px;
   left: -190px;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
